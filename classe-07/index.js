@@ -30,3 +30,10 @@ const usuários = [
         habilitado: true,
     },
 ]
+const usuraiosMaioresDeIdade = usuários.filter(x => x.idade > 17);
+const possuiCNH = usuraiosMaioresDeIdade.every(x => x.habilitado);
+if (possuiCNH) {
+    console.log("todos passaram no teste");
+} else {
+    console.log("todos precisam estar habilitados")
+}
